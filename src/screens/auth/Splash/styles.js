@@ -11,7 +11,6 @@ export default styles = StyleSheet.create({
     fontWeight:'bold'
   },
   container:{
-   
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
