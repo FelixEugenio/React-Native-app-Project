@@ -12,5 +12,19 @@ export default styles = StyleSheet.create({
   },
   container:{
     padding:15
+  },
+  agreeRow:{
+    flexDirection:'row',
+    alignItems:'center'
+  },
+  agreeText:{
+    color:'#4F63AC',
+    marginHorizontal:13
+  },
+  agreeTexBold:{
+    fontWeight:'bold'
+  },
+  button:{
+    marginVertical:20
   }
 })
