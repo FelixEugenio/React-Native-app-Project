@@ -1,11 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import Splash from './src/screens/auth/Splash';
+import SignUp from './src/screens/auth/SignUp';
 
 export default function App() {
   return (
     <SafeAreaView>
-      <Splash />
+      <SignUp />
     </SafeAreaView>
   );
 }
