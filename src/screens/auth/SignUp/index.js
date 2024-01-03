@@ -8,15 +8,19 @@ import Button from '../../../components/Button'
 import Separator from '../../../components/Separator'
 import GoogleLogin from "../../../components/GoogleLogin";
 
-const SignUp = () =>{
+const SignUp = ({navigation}) =>{
     const [checked,setChecked] = useState(false)
 
     const onSignIn = () => {
-
+  navigation.navigate('SignUp')
     }
+
+    const onBack = () => {
+        navigation.goBack();
+         }
     return (
         <View style={styles.container}>
-        <AuthHeader title="Sign Up" />
+        <AuthHeader  onBackPress={onBack} title="Sign Up" />
         <Input label="Nome" placeholder="Felix Mavila"/>
         <Input label="Email" placeholder="example@gmail.com"/>
         <Input isPassword={true} label="Password" placeholder="*********"/>
