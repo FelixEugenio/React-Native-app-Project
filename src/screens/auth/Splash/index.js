@@ -2,6 +2,7 @@ import React from "react";
 import { Text,Image, View, Pressable } from "react-native";
 import styles from "./styles";
 import Button from "../../../components/Button";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const Splash = ({navigation}) =>{
 
@@ -14,9 +15,10 @@ const Splash = ({navigation}) =>{
         }
 
     return (
+        <SafeAreaView>
         <View style={styles.container}>
         <Image resizeMode="contain" style={styles.image} source={require("../../../assets/logo.png")}/>
-        <Text style={styles.title}>Ola Seja Bem vindo</Text>
+        <Text style={styles.title}>Listning App</Text>
 
         <Button onPress={onSignup} title="Sign Up"/>
 
@@ -24,6 +26,7 @@ const Splash = ({navigation}) =>{
             <Text style={styles.footerText}>Sign In</Text>
         </Pressable>
         </View>
+        </SafeAreaView>
 
         
     )

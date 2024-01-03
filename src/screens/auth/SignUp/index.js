@@ -7,18 +7,22 @@ import CheckBox from '../../../components/CheckBox'
 import Button from '../../../components/Button'
 import Separator from '../../../components/Separator'
 import GoogleLogin from "../../../components/GoogleLogin";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const SignUp = ({navigation}) =>{
     const [checked,setChecked] = useState(false)
 
     const onSignIn = () => {
-  navigation.navigate('SignUp')
+  navigation.navigate('SignIn')
     }
 
     const onBack = () => {
         navigation.goBack();
          }
     return (
+        <SafeAreaView>
+
+        
         <View style={styles.container}>
         <AuthHeader  onBackPress={onBack} title="Sign Up" />
         <Input label="Nome" placeholder="Felix Mavila"/>
@@ -41,6 +45,7 @@ const SignUp = ({navigation}) =>{
         </Text>
 
         </View>
+        </SafeAreaView>
     )
 }
 
